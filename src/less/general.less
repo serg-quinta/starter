@@ -1,0 +1,32 @@
+html {
+  font-size: @global-font-size;
+  box-sizing: border-box;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Default body styles
+body {
+  padding: 0;
+  margin: 0;
+  font-family: @sans-serif-fonts;
+  line-height: @global-lineheight;
+  color: @global-font-color;
+  background: @body-background;
+}
+
+img {
+  // Grid defaults to get images and embeds to work properly
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+
+  // Get rid of gap under images by making them display: inline-block; by default
+  display: inline-block;
+  vertical-align: middle;
+}
