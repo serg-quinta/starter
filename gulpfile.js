@@ -9,7 +9,7 @@ const pug = require('gulp-pug');
 
 // Styles
 gulp.task('styles', function() {
-  return gulp.src('src/less/main.less')
+  return gulp.src('./src/less/main.less')
       .pipe(sourcemaps.init())
       .pipe(less())
       .pipe(postcss([ autoprefixer({ browsers: ['last 2 version', '> 2%', 'iOS >= 8', 'Safari >= 8'] }) ]))
@@ -19,9 +19,9 @@ gulp.task('styles', function() {
 
 // HTML
 gulp.task('pug', function(){
-  return gulp.src('src/*.pug', {since: gulp.lastRun('pug')})
+  return gulp.src('./src/*.pug')
     .pipe(pug({pretty: true}))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('./'))
 });
 
 // Build
@@ -29,8 +29,8 @@ gulp.task('build', gulp.parallel('styles', 'pug'));
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch('src/less/*.less', gulp.series('styles'));
-  gulp.watch('src/**/*.pug', gulp.series('pug'));
+  gulp.watch('./src/less/*.less', gulp.series('styles'));
+  gulp.watch('./src/**/*.pug', gulp.series('pug'));
 });
 
 // Dev
