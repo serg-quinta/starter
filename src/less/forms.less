@@ -1,6 +1,5 @@
 // Labels
 label {
-  color: @primary-color;
   display: block;
   font-size: 14px;
   line-height: 1.79;
@@ -13,7 +12,7 @@ label {
 
 // Form Controls
 .form-control {
-  border: 1px solid #d8d8d8;
+  border: 1px solid @dark-gray;
   color: #000;
   font-size: 14px;
   line-height: 20px;
@@ -21,8 +20,8 @@ label {
   width: 100%;
   height: 32px;
   &:focus {
-    border-color: fade(@primary-color, 50%);
-    outline: 1px solid fade(@primary-color, 50%);
+    // border-color: fade(@primary-color, 50%);
+    outline: 1px solid @dark-gray;
   }
   .placeholder(#000);
 }
@@ -31,78 +30,10 @@ label {
 .form-field {
   margin-bottom: 10px;
   position: relative;
-  &--inline {
-    align-items: center;
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    white-space: nowrap;
-    & > * {
-      flex: 1 1 auto;
-      margin-left: 10px;
-    }
-  }
 }
 
-.form-group-flex-all {
-  display: flex;
-  margin-bottom: 10px;
-  & .form-field {
-    flex: 1 1 0%;
-    margin-bottom: 0;
-  }
-  & .form-field + .form-field {
-    margin-left: 5px;
-  }
-}
-
-// Form Group Flexbox
-@media @tablet {
-  .form-field-inline-flex {
-    align-items: center;
-    display: inline-flex;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    &:last-child {
-      margin-right: 0;
-    }
-    & label {
-      flex: 1 0 auto;
-      padding-right: 10px;
-    }
-  }
-  .form-group-flex {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    margin-bottom: 10px;
-    & > .form-group {
-      flex: 1 1 auto;
-    }
-    & .form-field {
-      flex: 1 1 0%;
-      margin-bottom: 0;
-      &--button {
-        flex: 0 0 auto;
-      }
-    }
-    & .form-field + .form-field {
-      margin-left: 5px;
-    }
-  }
-}
-.form-group-inline {
-  & .form-field {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-    &:last-child {
-      margin-right: 0;
-    }
-    & .form-control,
-    & .ui-selectmenu-button {
-      width: 240px !important;
-      max-width: 100%;
-    }
-  }
+// Fieldset
+fieldset {
+  border: 1px solid @dark-gray;
+  margin: 0 0 10px;
 }
