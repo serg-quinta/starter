@@ -222,7 +222,7 @@ img {
   vertical-align: middle;
 }
 .page-main {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 20px;
   margin: auto;
 }
@@ -719,6 +719,16 @@ button:focus {
 .btn-link:hover,
 .btn-link:focus {
   border-bottom: 1px solid;
+}
+.page-header {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+}
+.page-footer {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
