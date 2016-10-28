@@ -552,6 +552,11 @@ fieldset {
   border: 1px solid #8a8a8a;
   margin: 0 0 10px;
 }
+.inline-group > label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
 button:focus {
   outline: none;
 }
