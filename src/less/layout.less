@@ -1,11 +1,20 @@
+.page {
+  &--full {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}
 // Page Sections
 .page-main {
-  max-width: @global-width;
-  padding: 0 20px;
-  margin: auto;
+  padding: 20px;
+  &--full {
+    flex: 1 1 auto;
+  }
 }
 .page-section {
-  margin: 0 0 35px;
+  max-width: @global-width;
+  margin: auto;
 }
 .section-header {
   background-color: @primary-color;

@@ -200,6 +200,7 @@ textarea {
 html {
   font-size: 100%;
   box-sizing: border-box;
+  height: 100%;
 }
 *,
 *::before,
@@ -213,6 +214,7 @@ body {
   line-height: 1.25;
   color: #000;
   background: #fff;
+  height: 100%;
 }
 img {
   max-width: 100%;
@@ -221,13 +223,30 @@ img {
   display: inline-block;
   vertical-align: middle;
 }
+.page--full {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
 .page-main {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: auto;
+  padding: 20px;
+}
+.page-main--full {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .page-section {
-  margin: 0 0 35px;
+  max-width: 1200px;
+  margin: auto;
 }
 .section-header {
   background-color: #2199e8;
@@ -617,14 +636,14 @@ button:focus {
   border-bottom: 1px solid;
 }
 .page-header {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: auto;
+  background-color: #2199e8;
+  color: #fff;
+  padding: 20px;
 }
 .page-footer {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: auto;
+  background-color: #2199e8;
+  color: #fff;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
