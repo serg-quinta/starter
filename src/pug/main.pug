@@ -1,13 +1,13 @@
 doctype html
 html(lang="en")
   include head.pug
-  body
-
+  body.page.page--full
+    
     block header
       include header.pug
 
     block main
-      .page-main
+      .page-main.page-main--full
         block content
 
     block footer
