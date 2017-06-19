@@ -1,5 +1,6 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -8,42 +9,41 @@ body {
 }
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
-audio:not([controls]) {
-  display: none;
+figcaption,
+figure,
+main {
+  display: block;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
   height: 0;
+  overflow: visible;
 }
-progress {
-  vertical-align: baseline;
-}
-template,
-[hidden] {
-  display: none;
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
-a:active,
-a:hover {
-  outline-width: 0;
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 b,
 strong {
@@ -53,12 +53,14 @@ b,
 strong {
   font-weight: bolder;
 }
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
 dfn {
   font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 mark {
   background-color: #ff0;
@@ -80,36 +82,29 @@ sub {
 sup {
   top: -0.5em;
 }
+audio,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 img {
   border-style: none;
 }
 svg:not(:root) {
   overflow: hidden;
 }
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-figure {
-  margin: 1em 40px;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
 button,
 input,
+optgroup,
 select,
 textarea {
-  font: inherit;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
   margin: 0;
-}
-optgroup {
-  font-weight: bold;
 }
 button,
 input {
@@ -139,9 +134,7 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: 0.35em 0.75em 0.625em;
 }
 legend {
   box-sizing: border-box;
@@ -150,6 +143,10 @@ legend {
   max-width: 100%;
   padding: 0;
   white-space: normal;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
 }
 textarea {
   overflow: auto;
@@ -171,13 +168,25 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
+}
+details,
+menu {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+canvas {
+  display: inline-block;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
 }
 .sr-only {
   position: absolute;
