@@ -12,7 +12,7 @@ gulp.task('styles', function() {
   return gulp.src('./src/less/main.less')
       .pipe(sourcemaps.init())
       .pipe(less())
-      .pipe(postcss([ autoprefixer({ browsers: ['last 2 version', '> 2%', 'iOS >= 8', 'Safari >= 8'] }) ]))
+      .pipe(postcss([ autoprefixer({ browsers: ['> 0.5%', 'last 2 version', 'Firefox ESR'] }) ]))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('css'));
 });
