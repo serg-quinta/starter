@@ -1,0 +1,86 @@
+section.component
+  svg(style='display:none', xmlns='http://www.w3.org/2000/svg')
+    symbol#rating-icon(viewbox='0 0 20 20')
+      title Star
+      path(d='M10.005 15.89l-5.535 3.056 1.059-6.473-4.475-4.585 6.179-.949 2.772-5.884 2.762 5.884 6.179.949-4.475 4.585 1.059 6.473z')
+  
+  h2#component-rating Rating
+  .component__block
+    h3 View Rating
+    p View rating includes structured data in microdata format
+    div(itemprop="reviewRating", itemscope, itemtype="http://schema.org/Rating")
+      span.rating-stars.rating-2
+        span.rating-star
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        span.rating-star
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        span.rating-star
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        span.rating-star
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        span.rating-star
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+      meta(itemprop='worstRating', content='1')
+      span(itemprop='ratingValue') 2 
+      | / 
+      span(itemprop='bestRating') 5 stars
+
+  .component__block
+    h3 View Aggregate Rating
+    p View aggregate rating includes structured data in microdata format
+    div(itemscope, itemtype='http://schema.org/Product')
+      span(itemprop='name') Product name that have aggregate rating
+      div(itemprop='aggregateRating', itemscope='', itemtype='http://schema.org/AggregateRating')
+        span.rating-stars.rating-4(itemprop='ratingValue', content='4')
+          span.rating-star
+            svg.rating-star__icon
+              use(xlink:href='#rating-icon')
+          span.rating-star
+            svg.rating-star__icon
+              use(xlink:href='#rating-icon')
+          span.rating-star
+            svg.rating-star__icon
+              use(xlink:href='#rating-icon')
+          span.rating-star
+            svg.rating-star__icon
+              use(xlink:href='#rating-icon')
+          span.rating-star
+            svg.rating-star__icon
+              use(xlink:href='#rating-icon')
+        |  based on <span itemprop="ratingCount">11</span> customer reviews
+
+  .component__block
+    h3 Add rating
+    p All stars are active in add rating by default. Add rating works without Javascript. 
+    form(action="#")
+      .rating-stars.adding-rating
+        input.rating-stars__input#rate1(type='radio', name='rating', value='1')
+        label.rating-star(for='rate1', title='Terrible')
+          span.sr-only 1 star
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        input.rating-stars__input#rate2(type='radio', name='rating', value='2')
+        label.rating-star(for='rate2', title='Not good')
+          span.sr-only 2 stars
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        input.rating-stars__input#rate3(type='radio', name='rating', value='3')
+        label.rating-star(for='rate3', title='Average')
+          span.sr-only 3 stars
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        input.rating-stars__input#rate4(type='radio', name='rating', value='4')
+        label.rating-star(for='rate4', title='Very good')
+          span.sr-only 4 stars
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')
+        input.rating-stars__input#rate5(type='radio', name='rating', value='5')
+        label.rating-star(for='rate5', title='Amazing')
+          span.sr-only 5 stars
+          svg.rating-star__icon
+            use(xlink:href='#rating-icon')

@@ -15,39 +15,117 @@
     <div class="page-main page-main--full">
       <div class="page-section"> 
         <h1>Components</h1>
-        <h2 id="component-breadcrumbs">Breadcrumbs</h2>
-        <nav class="breadcrumbs">
-          <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__title" itemprop="item" href="/"><span itemprop="name">Home</span></a>
-              <meta itemprop="position" content="1">
-            </li>
-            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__title" itemprop="item" href="/rehab"><span itemprop="name">Crumb Two</span></a>
-              <meta itemprop="position" content="2">
-            </li>
-            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__title" itemprop="item" href="/england"><span itemprop="name">Crumb Three</span></a>
-              <meta itemprop="position" content="3">
-            </li>
-            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span class="breadcrumbs__title" itemprop="name">Current Crumb</span>
-              <meta itemprop="position" content="4">
-            </li>
-          </ol>
-        </nav>
-        <h2 id="component-rating">Rating</h2><span class="rating-stars rating-4"><span class="rating-star">
-            <svg class="rating-star__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" width="20" height="20" stroke="#000" stroke-width="2" stroke-linejoin="round" fill="none">
+        <section class="component">
+          <h2 id="component-breadcrumbs">Breadcrumbs</h2>
+          <p>Breadcrumbs component includes structured data in microdata format.</p>
+          <nav class="breadcrumbs">
+            <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__title" itemprop="item" href="#"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__title" itemprop="item" href="#"><span itemprop="name">Crumb Two</span></a>
+                <meta itemprop="position" content="2">
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__title" itemprop="item" href="#"><span itemprop="name">Crumb Three</span></a>
+                <meta itemprop="position" content="3">
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span class="breadcrumbs__title" itemprop="name">Current Crumb</span>
+                <meta itemprop="position" content="4">
+              </li>
+            </ol>
+          </nav>
+        </section>
+        <section class="component">
+          <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="rating-icon" viewbox="0 0 20 20">
+              <title>Star</title>
               <path d="M10.005 15.89l-5.535 3.056 1.059-6.473-4.475-4.585 6.179-.949 2.772-5.884 2.762 5.884 6.179.949-4.475 4.585 1.059 6.473z"></path>
-            </svg></span><span class="rating-star">
-            <svg class="rating-star__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" width="20" height="20" stroke="#000" stroke-width="2" stroke-linejoin="round" fill="none">
-              <path d="M10.005 15.89l-5.535 3.056 1.059-6.473-4.475-4.585 6.179-.949 2.772-5.884 2.762 5.884 6.179.949-4.475 4.585 1.059 6.473z"></path>
-            </svg></span><span class="rating-star">
-            <svg class="rating-star__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" width="20" height="20" stroke="#000" stroke-width="2" stroke-linejoin="round" fill="none">
-              <path d="M10.005 15.89l-5.535 3.056 1.059-6.473-4.475-4.585 6.179-.949 2.772-5.884 2.762 5.884 6.179.949-4.475 4.585 1.059 6.473z"></path>
-            </svg></span><span class="rating-star">
-            <svg class="rating-star__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" width="20" height="20" stroke="#000" stroke-width="2" stroke-linejoin="round" fill="none">
-              <path d="M10.005 15.89l-5.535 3.056 1.059-6.473-4.475-4.585 6.179-.949 2.772-5.884 2.762 5.884 6.179.949-4.475 4.585 1.059 6.473z"></path>
-            </svg></span><span class="rating-star">
-            <svg class="rating-star__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" width="20" height="20" stroke="#000" stroke-width="2" stroke-linejoin="round" fill="none">
-              <path d="M10.005 15.89l-5.535 3.056 1.059-6.473-4.475-4.585 6.179-.949 2.772-5.884 2.762 5.884 6.179.949-4.475 4.585 1.059 6.473z"></path>
-            </svg></span></span>
+            </symbol>
+          </svg>
+          <h2 id="component-rating">Rating</h2>
+          <div class="component__block">
+            <h3>View Rating</h3>
+            <p>View rating includes structured data in microdata format</p>
+            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span class="rating-stars rating-2"><span class="rating-star">
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg></span><span class="rating-star">
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg></span><span class="rating-star">
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg></span><span class="rating-star">
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg></span><span class="rating-star">
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg></span></span>
+              <meta itemprop="worstRating" content="1"><span itemprop="ratingValue">2 </span>/ <span itemprop="bestRating">5 stars</span>
+            </div>
+          </div>
+          <div class="component__block">
+            <h3>View Aggregate Rating</h3>
+            <p>View aggregate rating includes structured data in microdata format</p>
+            <div itemscope itemtype="http://schema.org/Product"><span itemprop="name">Product name that have aggregate rating</span>
+              <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><span class="rating-stars rating-4" itemprop="ratingValue" content="4"><span class="rating-star">
+                    <svg class="rating-star__icon">
+                      <use xlink:href="#rating-icon"></use>
+                    </svg></span><span class="rating-star">
+                    <svg class="rating-star__icon">
+                      <use xlink:href="#rating-icon"></use>
+                    </svg></span><span class="rating-star">
+                    <svg class="rating-star__icon">
+                      <use xlink:href="#rating-icon"></use>
+                    </svg></span><span class="rating-star">
+                    <svg class="rating-star__icon">
+                      <use xlink:href="#rating-icon"></use>
+                    </svg></span><span class="rating-star">
+                    <svg class="rating-star__icon">
+                      <use xlink:href="#rating-icon"></use>
+                    </svg></span></span> based on <span itemprop="ratingCount">11</span> customer reviews</div>
+            </div>
+          </div>
+          <div class="component__block">
+            <h3>Add rating</h3>
+            <p>All stars are active in add rating by default. Add rating works without Javascript. </p>
+            <form action="#">
+              <div class="rating-stars adding-rating">
+                <input class="rating-stars__input" id="rate1" type="radio" name="rating" value="1">
+                <label class="rating-star" for="rate1" title="Terrible"><span class="sr-only">1 star</span>
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg>
+                </label>
+                <input class="rating-stars__input" id="rate2" type="radio" name="rating" value="2">
+                <label class="rating-star" for="rate2" title="Not good"><span class="sr-only">2 stars</span>
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg>
+                </label>
+                <input class="rating-stars__input" id="rate3" type="radio" name="rating" value="3">
+                <label class="rating-star" for="rate3" title="Average"><span class="sr-only">3 stars</span>
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg>
+                </label>
+                <input class="rating-stars__input" id="rate4" type="radio" name="rating" value="4">
+                <label class="rating-star" for="rate4" title="Very good"><span class="sr-only">4 stars</span>
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg>
+                </label>
+                <input class="rating-stars__input" id="rate5" type="radio" name="rating" value="5">
+                <label class="rating-star" for="rate5" title="Amazing"><span class="sr-only">5 stars</span>
+                  <svg class="rating-star__icon">
+                    <use xlink:href="#rating-icon"></use>
+                  </svg>
+                </label>
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
     </div>
     <footer class="page-footer">

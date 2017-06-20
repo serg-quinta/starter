@@ -29,7 +29,7 @@ gulp.task('build', gulp.parallel('styles', 'pug'));
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch('./src/less/*.less', gulp.series('styles'));
+  gulp.watch('./src/less/**/*.less', gulp.series('styles'));
   gulp.watch('./src/**/*.pug', gulp.series('pug'));
 });
 

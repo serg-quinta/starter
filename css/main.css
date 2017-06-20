@@ -645,5 +645,60 @@ button:focus {
   color: #fff;
   padding: 20px;
 }
+.rating-stars {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative;
+}
+.rating-stars__input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: #fff;
+}
+.rating-star {
+  display: block;
+}
+.rating-star__icon {
+  fill: #fff;
+  stroke: #ffae00;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  width: 20px;
+  height: 20px;
+  transition: fill .3s;
+}
+.rating-1 .rating-star:first-child .rating-star__icon,
+.rating-2 .rating-star:nth-child(-n+2) .rating-star__icon,
+.rating-3 .rating-star:nth-child(-n+3) .rating-star__icon,
+.rating-4 .rating-star:nth-child(-n+4) .rating-star__icon,
+.rating-5 .rating-star .rating-star__icon {
+  fill: #ffae00;
+}
+.adding-rating .rating-star {
+  cursor: pointer;
+}
+.adding-rating .rating-star__icon {
+  fill: #ffae00;
+}
+input:checked ~ .rating-star .rating-star__icon {
+  fill: #fff;
+}
+input:checked + .rating-star .rating-star__icon {
+  fill: #ffae00;
+}
+.adding-rating:hover .rating-star .rating-star__icon {
+  fill: #ffae00;
+}
+.adding-rating:hover .rating-star:hover ~ .rating-star .rating-star__icon {
+  fill: #fff;
+}
+.component {
+  margin: 0 0 3rem;
+}
+.component__block {
+  margin-bottom: 2rem;
+}
 
 /*# sourceMappingURL=main.css.map */
