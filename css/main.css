@@ -645,6 +645,18 @@ button:focus {
   color: #fff;
   padding: 20px;
 }
+.breadcrumbs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs__item {
+  display: inline-block;
+  vertical-align: top;
+}
+.breadcrumbs__item:not(:last-child)::after {
+  content: '/';
+}
 .rating-stars {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
