@@ -253,7 +253,7 @@ img {
   margin: auto;
 }
 .section-header {
-  background-color: #2199e8;
+  background-color: #009688;
   color: #fff;
   margin-bottom: 15px;
   padding: 5px 20px;
@@ -385,7 +385,7 @@ h6 small {
   line-height: 0;
 }
 a {
-  color: #2199e8;
+  color: #009688;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer;
@@ -393,7 +393,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0f5f94;
+  color: #00302c;
 }
 a img {
   border: 0;
@@ -483,7 +483,7 @@ kbd {
   width: 100%;
 }
 .table-grid th {
-  background-color: #2199e8;
+  background-color: #009688;
   border-bottom: 7px solid #fff;
   color: #fff;
   font-size: 14px;
@@ -591,7 +591,7 @@ button:focus {
   transition: all .3s;
 }
 .btn-primary {
-  background-color: #2199e8;
+  background-color: #009688;
   border-radius: 5px;
   color: #fff;
   padding: 10px 20px;
@@ -605,7 +605,7 @@ button:focus {
 .btn-attention {
   background-color: #ffae00;
   border-radius: 5px;
-  color: #2199e8;
+  color: #009688;
   padding: 10px 20px;
   text-transform: uppercase;
 }
@@ -634,12 +634,12 @@ button:focus {
   border-bottom: 1px solid;
 }
 .page-header {
-  background-color: #2199e8;
+  background-color: #009688;
   color: #fff;
   padding: 20px;
 }
 .page-footer {
-  background-color: #2199e8;
+  background-color: #009688;
   color: #fff;
   padding: 20px;
 }
