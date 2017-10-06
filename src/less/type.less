@@ -91,13 +91,13 @@ a {
 
 // Horizontal rule
 hr {
-  max-width: @hr-width;
+  max-width: @global-width;
   height: 0;
   border-right: 0;
   border-top: 0;
-  border-bottom: @hr-border;
+  border-bottom: 1px solid @medium-gray;
   border-left: 0;
-  margin: @hr-margin;
+  margin: 1rem auto;
   clear: both;
 }
 
@@ -105,9 +105,9 @@ hr {
 ul,
 ol,
 dl {
-  line-height: @list-lineheight;
-  margin-bottom: @list-margin-bottom;
-  list-style-position: @list-style-position;
+  line-height: @paragraph-lineheight;
+  margin-bottom: @paragraph-margin-bottom;
+  list-style-position: outside;
 }
 
 // List items
@@ -117,50 +117,50 @@ li {
 
 // Unordered lists
 ul {
-  list-style-type: @list-style-type;
-  margin-left: @list-side-margin;
+  list-style-type: disc;
+  margin-left: 1.25rem;
 }
 
 // Ordered lists
 ol {
-  margin-left: @list-side-margin;
+  margin-left: 1.25rem;
 }
 
 // Nested unordered/ordered lists
 ul, ol {
   & & {
-    margin-left: @list-nested-side-margin;
+    margin-left: 1.25rem;
     margin-bottom: 0;
   }
 }
 
 // Definition lists
 dl {
-  margin-bottom: @defnlist-margin-bottom;
+  margin-bottom: 1rem;
 
   dt {
-    margin-bottom: @defnlist-term-margin-bottom;
-    font-weight: @defnlist-term-weight;
+    font-weight: @global-weight-bold;
+    margin-bottom: 0.3rem;
   }
 }
 
 // Blockquotes
 blockquote {
+  border-left: 1px solid @medium-gray;
   margin: 0 0 @paragraph-margin-bottom;
-  padding: @blockquote-padding;
-  border-left: @blockquote-border;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
 
   &, p {
     line-height: @paragraph-lineheight;
-    color: @blockquote-color;
+    color: @dark-gray;
   }
 }
 
 // Citations
 cite {
+  color: @dark-gray;
   display: block;
-  font-size: @cite-font-size;
-  color: @cite-color;
+  font-size: 0.82rem;;
 
   &:before {
     content: '\2014 \0020';
@@ -171,24 +171,24 @@ cite {
 abbr {
   color: @global-font-color;
   cursor: help;
-  border-bottom: @abbr-underline;
+  border-bottom: 1px dotted @black;
 }
 
 // Code
 code {
-  font-family: @code-font-family;
-  font-weight: @code-font-weight;
-  color: @code-color;
-  background-color: @code-background;
-  border: @code-border;
-  padding: @code-padding;
+  background-color: @light-gray;
+  border: 1px solid @medium-gray;
+  font-family: @font-family-monospace;
+  font-weight: @global-weight-normal;
+  color: @black;
+  padding: 0.125rem 0.3125rem 0.0625rem;
 }
 
 // Keystrokes
 kbd {
-  padding: @keystroke-padding;
+  background-color: @light-gray;
+  color: @black;
+  font-family: @font-family-monospace;
   margin: 0;
-  background-color: @keystroke-background;
-  color: @keystroke-color;
-  font-family: @keystroke-font;
+  padding: 0.125rem 0.25rem 0;
 }
