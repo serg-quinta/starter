@@ -1,3 +1,10 @@
-<div class="card">
-  <h3 class="card__title">Card Title</h3>
+{% macro card(href='product.html', img='img/card.jpg', title='Title', class='') %}
+
+<div class="card{{ class }}">
+  <div class="card__imgWrapper">
+    <img class="card__img" src="{{ img }}" alt="{{ title }}">
+  </div>
+  <h3 class="card__title">{{ title }}</h3>
+  <div class="card__body">Card Body</div>
 </div>
+{% endmacro %}
