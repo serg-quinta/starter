@@ -1,11 +1,22 @@
 {% set title = "Form Elements" %} 
 {% extends "layouts/_layout.html" %}
 
+{% import "import/_forms.html" as forms %}
+
 {% block content %}
 
 <div class="page-section">
 
   <h1>Form Elements</h1>
+
+  <h2>Checkbox</h2>
+  {{ forms.checkboxField('checkbox', label='Styled Checkbox', checked='true') }}
+
+  <h2>Radio</h2>
+  <div class="inlineGroup">
+    {{ forms.radio('radio', label='Yes', id='radio-1', value='yes', checked='true') }}
+    {{ forms.radio('radio', label='No', id='radio-2', value='no') }}
+  </div>
 	
 </div>
 

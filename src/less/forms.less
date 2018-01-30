@@ -11,7 +11,7 @@ label {
 }
 
 // Form Controls
-.form-control {
+.formControl {
   border: 1px solid @dark-gray;
   color: #000;
   font-size: 14px;
@@ -27,9 +27,71 @@ label {
 }
 
 // Form Fields
-.form-field {
+.formField {
   margin-bottom: 10px;
   position: relative;
+  &--checkbox {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 30px;
+    position: relative;
+    & input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
+  &--radio {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 30px;
+    position: relative;
+    & input[type="radio"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
+}
+.checkbox {
+  background: no-repeat 50% #fff;
+  border: 1px solid @primary-color;
+  color: @primary-color;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
+  input[type="checkbox"]:checked + & svg {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.radio {
+  background: no-repeat 50% #fff;
+  border: 1px solid @primary-color;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  transition: all .3s;
+  input[type="radio"]:checked + & {
+    background-color: @primary-color;
+    box-shadow: 0 0 0 3px #fff inset;
+  }
 }
 
 // Fieldset
@@ -37,8 +99,11 @@ fieldset {
   border: 1px solid @dark-gray;
   margin: 0 0 10px;
 }
-.inline-group > label {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 5px;
+.inlineGroup {
+  margin: 0 -5px;
+  > label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+  }
 }
