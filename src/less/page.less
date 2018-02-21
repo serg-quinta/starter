@@ -1,0 +1,39 @@
+.page {
+  &--stretch {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    & .page__main {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+    & .page__header,
+    & .page__shrink {
+      flex-shrink: 0;
+    }
+  }
+  &__main {
+    padding: @global-gutter;
+  }
+  &__header {
+    border-top: 3px solid @primary-color;
+    border-bottom: 3px solid @primary-color;
+    padding: @global-gutter/2 @global-gutter;
+    // This is experimental property. See https://caniuse.com/#search=stick.
+    &--sticky {
+      background-color: @body-background;
+      position: sticky;
+      top: 0;
+      z-index: 101;
+    }
+  }
+  &__footer {
+    border-top: 3px solid @primary-color;
+    border-bottom: 3px solid @primary-color;
+    padding: @global-gutter;
+  }
+  &__narrow {
+    max-width: @global-width;
+    margin: auto;
+  }
+}

@@ -1,0 +1,25 @@
+.row {
+  @media (min-width: @tablet) {
+    display: flex;
+  }
+}
+.column {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.mainColumn {
+  @media (min-width: @tablet) {
+    width: 66.66%;
+  }
+  @media (min-width: @tablet-landscape) {
+    width: 75%;
+  }
+}
+.asideColumn {
+  @media (min-width: @tablet) {
+    width: 33.33%;
+  }
+  @media (min-width: @tablet-landscape) {
+    width: 25%;
+  }
+}

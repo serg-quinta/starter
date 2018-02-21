@@ -4,24 +4,19 @@
 {% import "import/_forms.html" as forms %}
 
 {% block content %}
+<h1>Form Elements</h1>
 
-<div class="page-section">
+<h2>Inputs</h2>
 
-  <h1>Form Elements</h1>
+<h3>Checkbox</h3>
+{{ forms.checkboxField('checkbox', label='Styled Checkbox', checked='true') }}
 
-  <h2>Inputs</h2>
-
-  <h3>Checkbox</h3>
-  {{ forms.checkboxField('checkbox', label='Styled Checkbox', checked='true') }}
-  
-  <h3>Radio</h3>
-  <div class="inlineGroup">
-    {{ forms.radio('radio', label='Yes', id='radio-1', value='yes', checked='true') }}
-    {{ forms.radio('radio', label='No', id='radio-2', value='no') }}
-  </div>
-	
-  <h2>Select</h2>
-  <h2>Textarea</h2>
+<h3>Radio</h3>
+<div class="inlineGroup">
+  {{ forms.radio('radio', label='Yes', id='radio-1', value='yes', checked='true') }}
+  {{ forms.radio('radio', label='No', id='radio-2', value='no') }}
 </div>
 
+<h2>Select</h2>
+<h2>Textarea</h2>
 {% endblock %}

@@ -1,5 +1,4 @@
 # TODO
-1. Fix layout full page IE11 bug. Height and min-height doesn't work.
-2. Add components.
-3. Change class names to camelCase.
-4. Add menu.
+* Min-height doesn't work for stretch page in IE11.
+* Change class names to camelCase.
+* Add menu.

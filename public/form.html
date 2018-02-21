@@ -14,25 +14,32 @@
 
 </head>
 
-<body class="page">
+<body class="page page--stretch">
 
-  <header class="page-header">
-  <div class="page-section">Starter Header</div>
+  <header class="page__header page__header--sticky">
+  <div class="page__narrow">
+    <div class="navbar">
+      <a href="/" class="logo">Starter</a>
+      <nav>
+        <ul class="nav">
+          <li class="nav__item"><a href="/" class="nav__link">Pages</a></li>
+          <li class="nav__item"><a href="components.html" class="nav__link">Components</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 
 
-  <main class="page-main">
+  <main class="page__main">
+    <div class="page__narrow">
+      
+<h1>Form Elements</h1>
 
-    
+<h2>Inputs</h2>
 
-<div class="page-section">
+<h3>Checkbox</h3>
 
-  <h1>Form Elements</h1>
-
-  <h2>Inputs</h2>
-
-  <h3>Checkbox</h3>
-  
 <label class="formField formField--checkbox ">Styled Checkbox
   
   <input type="checkbox" name="checkbox" id="checkbox" checked>
@@ -42,10 +49,10 @@
   </span>
 </label>
 
+
+<h3>Radio</h3>
+<div class="inlineGroup">
   
-  <h3>Radio</h3>
-  <div class="inlineGroup">
-    
 <label class="formField formField--radio ">Yes
   
   <input type="radio" name="radio" id="radio-1" value="yes" checked>
@@ -53,7 +60,7 @@
   <span class="radio"></span>
 </label>
 
-    
+  
 <label class="formField formField--radio ">No
   
   <input type="radio" name="radio" id="radio-2" value="no">
@@ -61,18 +68,16 @@
   <span class="radio"></span>
 </label>
 
-  </div>
-	
-  <h2>Select</h2>
-  <h2>Textarea</h2>
 </div>
 
+<h2>Select</h2>
+<h2>Textarea</h2>
 
-    
+    </div>
   </main>
 
-  <footer class="page-footer">
-  <div class="page-section">Starter Footer</div>
+  <footer class="page__footer">
+  <div class="page__narrow">Starter Footer</div>
 </footer>
 
 

@@ -18,10 +18,16 @@
 
   {% include "partials/_header.html" %}
 
-  <main class="page__main">
-    <div class="page__narrow">
-      {% block content %}{% endblock %}
+  <main class="page__main page__main--narrow">
+    <div class="row page__narrow">
+      <div class="mainColumn">
+        {% block content %}{% endblock %}
+      </div>
+      <div class="asideColumn">
+        {% block aside %}{% endblock %}
+      </div>
     </div>
+    
   </main>
 
   {% include "partials/_footer.html" %}
