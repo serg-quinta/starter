@@ -9,9 +9,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {# <link rel="apple-touch-icon" href="apple-touch-icon.png"> #}
-
   <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body class="page page--stretch">
@@ -19,15 +17,16 @@
   {% include "partials/_header.html" %}
 
   <main class="page__main page__main--narrow">
-    <div class="row page__narrow">
-      <div class="mainColumn">
-        {% block content %}{% endblock %}
-      </div>
-      <div class="asideColumn">
-        {% block aside %}{% endblock %}
+    <div class="page__narrow">
+      <div class="row">
+        <div class="mainColumn">
+          {% block content %}{% endblock %}
+        </div>
+        <div class="asideColumn">
+          {% block aside %}{% endblock %}
+        </div>
       </div>
     </div>
-    
   </main>
 
   {% include "partials/_footer.html" %}

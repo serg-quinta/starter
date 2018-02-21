@@ -1,14 +1,19 @@
 .row {
   @media (min-width: @tablet) {
     display: flex;
+    margin: 0 -@global-gutter/2;
   }
 }
 .column {
-  flex-basis: 0;
-  flex-grow: 1;
+  @media (min-width: @tablet) {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0 @global-gutter/2;
+  }
 }
 .mainColumn {
   @media (min-width: @tablet) {
+    padding: 0 @global-gutter/2;
     width: 66.66%;
   }
   @media (min-width: @tablet-landscape) {
@@ -17,6 +22,7 @@
 }
 .asideColumn {
   @media (min-width: @tablet) {
+    padding: 0 @global-gutter/2;
     width: 33.33%;
   }
   @media (min-width: @tablet-landscape) {
