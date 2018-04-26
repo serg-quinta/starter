@@ -445,11 +445,6 @@ label {
   font-size: 14px;
   line-height: 1.79;
 }
-.form-field--inline > label {
-  display: inline-block;
-  vertical-align: middle;
-  width: auto;
-}
 .formControl {
   border: 1px solid #8a8a8a;
   color: #000;
@@ -458,6 +453,9 @@ label {
   padding: 5px 10px;
   width: 100%;
   height: 32px;
+}
+textarea.formControl {
+  height: auto;
 }
 .formControl:focus {
   outline: 1px solid #8a8a8a;
@@ -543,13 +541,14 @@ fieldset {
   border: 1px solid #8a8a8a;
   margin: 0 0 10px;
 }
-.inlineGroup {
+.formGroup--inline {
   margin: 0 -5px;
 }
-.inlineGroup > label {
+.formGroup--inline > label {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 5px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 button:focus {
   outline: none;

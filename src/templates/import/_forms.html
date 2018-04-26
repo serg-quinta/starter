@@ -1,39 +1,23 @@
-{% macro field(name, label='Label', value='', type='text', labelClass='') %}
+{% macro field(name, label='Label', value='', type='text') %}
 <div class="formField">
-  {% if labelClass %}
-  <label for="{{ name }}" class="{{ labelClass }}">{{ label | escape }}</label>
-  {% else %}
   <label for="{{ name }}">{{ label | escape }}</label>
-  {% endif %}
   <input class="formControl" type="{{ type }}" name="{{ name }}" id="{{ name }}" 
         placeholder="{{ label | escape }}" value="{{ value | escape }}">
 </div>
 {% endmacro %}
 
-{% macro textarea(name, label='Label', rows='1', labelClass='') %}
+{% macro textarea(name, label='Label', rows='3') %}
 <div class="formField">
-  {% if labelClass %}
-  <label for="{{ name }}" class="{{ labelClass }}">{{ label | escape }}</label>
-  {% else %}
   <label for="{{ name }}">{{ label | escape }}</label>
-  {% endif %}
   <textarea class="formControl" name="{{ name }}" id="{{ name }}" rows="{{ rows }}"
-        placeholder="{{ label | escape }}"></textarea>
+            placeholder="{{ label | escape }}"></textarea>
 </div>
 {% endmacro %}
 
-{% macro selectField(name, label='Label', labelClass='', selected='', gray='', attribute='', options='', selectFieldClass='') %}
-<div class="formField formField--select {{ selectFieldClass }}">
-  {% if labelClass %}
-  <label for="{{ name }}" class="{{ labelClass }}">{{ label | escape }}</label>
-  {% else %}
+{% macro selectField(name, label='Label', selected='', options='') %}
+<div class="formField formField--select">
   <label for="{{ name }}">{{ label | escape }}</label>
-  {% endif %}
-  {% if gray %}
-  <select class="formControl formControl--select formControl--gray" name="{{ name }}" id="{{ name }}" {{ attribute }}>
-  {% else %}
-  <select class="formControl formControl--select" name="{{ name }}" id="{{ name }}" {{ attribute }}>
-  {% endif %}
+  <select class="formControl formControl--select" name="{{ name }}" id="{{ name }}" >
     {% if selected %}
     <option selected disabled value="default">{{ selected }}</option>
     {% endif %}
@@ -44,8 +28,8 @@
 </div>
 {% endmacro %}
 
-{% macro checkboxField(name, label='Label', checked='', class='') %}
-<label class="formField formField--checkbox {{ class }}">{{ label | escape }}
+{% macro checkboxField(name, label='Label', checked='') %}
+<label class="formField formField--checkbox">{{ label | escape }}
   {% if checked %}
   <input type="checkbox" name="{{ name }}" id="{{ name }}" checked>
   {% else %}
@@ -57,8 +41,8 @@
 </label>
 {% endmacro %}
 
-{% macro radio(name, label='Label', checked='', id='', value='', class='') %}
-<label class="formField formField--radio {{ class }}">{{ label | safe }}
+{% macro radio(name, label='Label', checked='', id='', value='') %}
+<label class="formField formField--radio">{{ label | safe }}
   {% if checked %}
   <input type="radio" name="{{ name }}" id="{{ id }}" value="{{ value }}" checked>
   {% else %}

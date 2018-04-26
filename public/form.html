@@ -37,11 +37,18 @@
       
 <h1>Form Elements</h1>
 
-<h2>Inputs</h2>
+<h2>Text</h2>
 
-<h3>Checkbox</h3>
+<div class="formField">
+  <label for="text">Text Control</label>
+  <input class="formControl" type="text" name="text" id="text" 
+        placeholder="Text Control" value="">
+</div>
 
-<label class="formField formField--checkbox ">Styled Checkbox
+
+<h2>Checkbox</h2>
+
+<label class="formField formField--checkbox">Styled Checkbox
   
   <input type="checkbox" name="checkbox" id="checkbox" checked>
   
@@ -51,10 +58,10 @@
 </label>
 
 
-<h3>Radio</h3>
-<div class="inlineGroup">
+<h2>Radio</h2>
+<div class="formGroup formGroup--inline">
   
-<label class="formField formField--radio ">Yes
+<label class="formField formField--radio">Yes
   
   <input type="radio" name="radio" id="radio-1" value="yes" checked>
   
@@ -62,7 +69,7 @@
 </label>
 
   
-<label class="formField formField--radio ">No
+<label class="formField formField--radio">No
   
   <input type="radio" name="radio" id="radio-2" value="no">
   
@@ -72,7 +79,33 @@
 </div>
 
 <h2>Select</h2>
+
+<div class="formField formField--select">
+  <label for="select">Select Control</label>
+  <select class="formControl formControl--select" name="select" id="select" >
+    
+    <option selected disabled value="default">Select Option</option>
+    
+    
+    <option value="one">Option One</option>
+    
+    <option value="two">Option Two</option>
+    
+  </select>
+</div>
+
+<h3>Styled Select</h3>
+<p>Need to be added</p>
+
 <h2>Textarea</h2>
+
+<div class="formField">
+  <label for="textarea">Textarea</label>
+  <textarea class="formControl" name="textarea" id="textarea" rows="3"
+            placeholder="Textarea"></textarea>
+</div>
+
+
 
     </div>
   </main>

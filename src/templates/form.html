@@ -1,22 +1,34 @@
 {% set title = "Form Elements" %} 
 {% extends "layouts/_layout.html" %}
 
+{% set selectOptions = [
+  { "title": "Option One", "value": "one" },
+  { "title": "Option Two", "value": "two" }
+  ]
+%}
 {% import "import/_forms.html" as forms %}
 
 {% block content %}
 <h1>Form Elements</h1>
 
-<h2>Inputs</h2>
+<h2>Text</h2>
+{{ forms.field('text', label='Text Control') }}
 
-<h3>Checkbox</h3>
+<h2>Checkbox</h2>
 {{ forms.checkboxField('checkbox', label='Styled Checkbox', checked='true') }}
 
-<h3>Radio</h3>
-<div class="inlineGroup">
+<h2>Radio</h2>
+<div class="formGroup formGroup--inline">
   {{ forms.radio('radio', label='Yes', id='radio-1', value='yes', checked='true') }}
   {{ forms.radio('radio', label='No', id='radio-2', value='no') }}
 </div>
 
 <h2>Select</h2>
+{{ forms.selectField('select', label='Select Control', selected='Select Option', options=selectOptions) }}
+<h3>Styled Select</h3>
+<p>Need to be added</p>
+
 <h2>Textarea</h2>
+{{ forms.textarea('textarea', label='Textarea') }}
+
 {% endblock %}
