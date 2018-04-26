@@ -73,7 +73,7 @@ label {
     opacity: 0;
     transition: .3s;
   }
-  input[type="checkbox"]:checked + & svg {
+  input[type="checkbox"]:checked ~ & svg {
     visibility: visible;
     opacity: 1;
   }
@@ -88,7 +88,7 @@ label {
   top: 1px;
   left: 0;
   transition: all .3s;
-  input[type="radio"]:checked + & {
+  input[type="radio"]:checked ~ & {
     background-color: @primary-color;
     box-shadow: 0 0 0 3px #fff inset;
   }
